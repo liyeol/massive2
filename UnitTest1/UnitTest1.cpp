@@ -1,6 +1,6 @@
-Ôªø#include "pch.h"
+#include "pch.h"
 #include "CppUnitTest.h"
-#include "C:\Users\–ï–ª–∏–∑–∞–≤–µ—Ç–∞\source\repos\UnitTest1\ConsoleApplication1\bubblesort.cpp"
+#include "C:\Users\≈ÎËÁ‡‚ÂÚ‡\source\repos\UnitTest1\ConsoleApplication1\bubblesort.cpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -54,6 +54,61 @@ namespace UnitTest1
 				Assert::AreEqual(SortArray[i], Array[i]);
 			}
 
+		};
+	};
+	TEST_CLASS(UnitTest4)
+	{
+	public:
+
+		TEST_METHOD(SortTestMethod4)
+		{
+			BubbleSort A;
+			const unsigned int count = 5;
+			int Array[count] = { 3, 6, 1, 7, 4 };
+			int SortArray[count] = { 1, 3, 4, 6, 7 };
+
+			A.bubblesort(Array, count);
+			for (int i = 0; i < count; i++)
+			{
+				Assert::AreEqual(SortArray[i], Array[i]);
+			}
+
+		};
+	};
+
+	TEST_CLASS(UnitTest5)
+	{
+	public:
+
+		TEST_METHOD(SortTestMethod5)
+		{
+			BubbleSort A;
+			const unsigned int count = 5;
+			int Array[count] = { 3, 3, 3, 3, 3 };
+			int SortArray[count] = { 3, 3, 5, 3, 3 };
+			A.bubblesort(Array, count);
+			for (int i = 0; i < count; i++)
+			{
+				Assert::AreEqual(SortArray[i], Array[i]);
+			}
+		};
+	};
+
+	TEST_CLASS(UnitTest6)
+	{
+	public:
+
+		TEST_METHOD(SortTestMethod6)
+		{
+			BubbleSort A;
+			const unsigned int count = 5;
+			int Array[count] = { -3, -1, -5, 3, 5 };
+			int SortedArray[count] = { -5, -3, -1, 3, 5 };
+			A.bubblesort(Array, count);
+			for (int i = 0; i < count; i++)
+			{
+				Assert::AreEqual(SortArray[i], Array[i]);
+			}
 		};
 	};
 
